@@ -1,0 +1,1170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alessandro Montanari | Astrophysicist & Software Engineer</title>
+    <meta name="description" content="Alessandro Montanari - Postdoc researcher in Very-High-Energy Astrophysics, Software Engineer, and AI/ML specialist">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7c3aed;
+            --bg-light: #f8fafc;
+            --bg-dark: #0f172a;
+            --text-light: #1e293b;
+            --text-dark: #f1f5f9;
+            --accent: #f59e0b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--bg-light);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        .dark-mode .section-title {
+            color: var(--text-dark);
+        }
+
+        .dark-mode .experience-item, .dark-mode .project-card, .dark-mode .education-item {
+            background-color: #1e293b;
+            border-color: #334155;
+        }
+
+        .dark-mode .skill-tag {
+            background-color: #334155;
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: var(--bg-light);
+            z-index: 100;
+            transition: background-color 0.3s;
+        }
+
+        .dark-mode header {
+            background: var(--bg-dark);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .dark-mode .logo {
+            color: var(--secondary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .dark-mode nav a {
+            color: var(--text-dark);
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .dark-mode nav a:hover {
+            color: var(--secondary);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            transition: color 0.3s;
+        }
+
+        .dark-mode .theme-toggle {
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .title {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        .dark-mode .hero .title {
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            background: var(--primary-dark);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* About Section */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--text-light);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .dark-mode .skill-category {
+            background: #1e293b;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .dark-mode .skill-category h3 {
+            color: var(--secondary);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #e2e8f0;
+            color: var(--text-light);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Experience Section */
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .experience-role {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-light);
+        }
+
+        .dark-mode .experience-role {
+            color: var(--text-dark);
+        }
+
+        .experience-date {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .dark-mode .experience-date {
+            color: var(--secondary);
+        }
+
+        .experience-company {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .dark-mode .experience-company {
+            color: #94a3b8;
+        }
+
+        .experience-description {
+            line-height: 1.7;
+        }
+
+        .experience-description ul {
+            margin-left: 20px;
+        }
+
+        .experience-description li {
+            margin-bottom: 8px;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .dark-mode .project-card h3 {
+            color: var(--secondary);
+        }
+
+        .project-card .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .dark-mode .project-card p {
+            color: #94a3b8;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .project-links a {
+            display: inline-block;
+            padding: 6px 12px;
+            background: var(--primary);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: background-color 0.3s;
+        }
+
+        .project-links a:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Education Section */
+        .education-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .education-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .education-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .education-info p {
+            color: #64748b;
+        }
+
+        .education-date {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .dark-mode .education-date {
+            color: var(--secondary);
+        }
+
+        /* Publications Section */
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .publication-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .publication-item h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .publication-item .journal {
+            font-style: italic;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .title {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .education-item {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Print Styles */
+        @media print {
+            .theme-toggle,
+            .social-links,
+            .btn,
+            nav,
+            footer {
+                display: none !important;
+            }
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">AM</div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="animate-fade-in-up">Alessandro Montanari</h1>
+                <p class="title animate-fade-in-up">Postdoc Researcher | Software Engineer | AI Specialist</p>
+                <p class="animate-fade-in-up">
+                    I bridge the gap between astrophysics and software engineering, developing cutting-edge tools 
+                    for Cherenkov telescope data analysis and AI-powered scientific applications.
+                </p>
+                <div class="social-links animate-fade-in-up">
+                    <a href="mailto:montanari@llr.in2p3.fr" title="Email">✉️</a>
+                    <a href="https://github.com/alessandromontanari" title="GitHub">💻</a>
+                    <a href="https://linkedin.com/in/alessandro-montanari" title="LinkedIn">🔗</a>
+                </div>
+                <div style="margin-top: 30px;" class="animate-fade-in-up">
+                    <a href="#contact" class="btn">Get in Touch</a>
+                    <a href="#projects" class="btn btn-secondary" style="margin-left: 15px;">View My Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I'm a passionate researcher and software engineer specializing in 
+                            <strong>Very-High-Energy Astrophysics</strong> with a strong background in 
+                            <strong>Data Science</strong> and <strong>Web Development</strong>.
+                        </p>
+                        <p>
+                            Currently working as a Postdoc at <strong>Laboratoire Leprince-Ringuet, École Polytechnique</strong> 
+                            in Palaiseau, France, I lead the development of critical tools for Cherenkov telescopes, 
+                            including the NectarCAM Data Quality Monitoring system and AI-powered applications.
+                        </p>
+                        <p>
+                            My work spans from detecting cosmic phenomena like the Fermi Bubbles to building 
+                            full-stack applications with AI search capabilities. I have a Ph.D. in Astrophysics and 
+                            Cosmology from CEA/University Paris Saclay, and I'm fluent in Italian, English, and French.
+                        </p>
+                        <div style="margin-top: 20px;">
+                            <a href="#experience" class="btn">View Experience</a>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 3rem; color: white;">👨‍🔬</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section" style="background: #f1f5f9;">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>💻 Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">C/C++</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">PHP</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🛠️ Frameworks & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Bokeh</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">Pyro</span>
+                            <span class="skill-tag">SLURM</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🤖 AI/ML</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">LLM Fine-tuning</span>
+                            <span class="skill-tag">Cosine Similarity</span>
+                            <span class="skill-tag">RAG</span>
+                            <span class="skill-tag">nomic-embed-text</span>
+                            <span class="skill-tag">gemma3</span>
+                            <span class="skill-tag">unsloth</span>
+                            <span class="skill-tag">LoRA</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🚀 DevOps</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">CI/CD Pipelines</span>
+                            <span class="skill-tag">GitLab</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Unit Testing</span>
+                            <span class="skill-tag">OPC UA</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🌍 Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Italian (Native)</span>
+                            <span class="skill-tag">English (Fluent)</span>
+                            <span class="skill-tag">French (Fluent)</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🔬 Research Areas</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Astrophysics</span>
+                            <span class="skill-tag">Cherenkov Telescopes</span>
+                            <span class="skill-tag">FAIR Data</span>
+                            <span class="skill-tag">Data Science</span>
+                            <span class="skill-tag">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-role">Postdoc, Software Engineer & Lead Developer</div>
+                                <div class="experience-company">H.E.S.S., CTAO, NectarCAM | Laboratoire Leprince-Ringuet, École Polytechnique</div>
+                            </div>
+                            <div class="experience-date">Oct. 2025 – Present</div>
+                        </div>
+                        <div class="experience-description">
+                            <p><strong>Palaiseau, France</strong> (Advisor: Dr. Stephen Fegan)</p>
+                            <ul>
+                                <li>Owned end-to-end development of the <strong>NectarCAM Data Quality Monitoring</strong>, a critical tool for Cherenkov telescopes</li>
+                                <li>Optimized execution time by <strong>3x</strong>, saving hundreds of kg of CO₂ per calibration cycle</li>
+                                <li>Contributed to the Bokeh-based web app for real-time monitoring, with Python backend and ZODB database</li>
+                                <li>Developed CI/CD pipelines for GitLab/GitHub and wrote extensive unit tests for every deployment</li>
+                                <li>Development for the nectarchain Test Readiness Review and Acceptance Verification for CTAO</li>
+                                <li>Built an OPC UA interface for server-client communication for NectarCAM calibration light sources</li>
+                                <li>Developed a fine-tuned LLM prototype on NectarCAM elogs, <strong>nectartron</strong>, with unsloth</li>
+                                <li>Member of the H.E.S.S. Executive Committee; supervised 2 Bachelor's projects</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-role">Postdoc, Full-Stack Developer</div>
+                                <div class="experience-company">H.E.S.S./PUNCH4NFDI/nfdi.software | Landessternwarte, Heidelberg University</div>
+                            </div>
+                            <div class="experience-date">Oct. 2022 – Sept. 2025</div>
+                        </div>
+                        <div class="experience-description">
+                            <p><strong>Heidelberg, Germany</strong> (Advisor: Prof. Dr. Stefan Wagner)</p>
+                            <ul>
+                                <li>Led full-stack development of <strong>physics.tools</strong>, a software search engine for the scientific community</li>
+                                <li>Built PostgreSQL database, Python backend API, and PHP frontend</li>
+                                <li>Developed AI-powered search (cosine similarity + LLM re-ranking via ollama, nomic-embed-text, gemma3)</li>
+                                <li>Designed a RAG application to improve search accuracy</li>
+                                <li><strong>Detected the Fermi Bubbles with H.E.S.S. at 8σ significance</strong> (research field standard: 5–6σ)</li>
+                                <li>Improved dark matter constraints by 4x (thermal models) and 2x (non-canonical models) via data analysis</li>
+                                <li>Co-lead of the H.E.S.S. Operations department: 20+ researchers across institutes</li>
+                                <li>Mentored 1 Master's student and close collaboration with a Ph.D. project</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-role">Ph.D. student, Research Engineer</div>
+                                <div class="experience-company">H.E.S.S. | Irfu/DPhP, CEA, University Paris Saclay</div>
+                            </div>
+                            <div class="experience-date">Oct. 2019 – Sept. 2022</div>
+                        </div>
+                        <div class="experience-description">
+                            <p><strong>Gif-sur-Yvette, France</strong> (Advisor: Dr. Emmanuel Moulin)</p>
+                            <ul>
+                                <li>Developed statistical methods (Log-Likelihood Ratio Test-Statistics) for H.E.S.S. data analysis</li>
+                                <li>Prototyped Bayesian Neural Networks (Pyro, PyTorch) to improve signal-background separation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section" style="background: #f1f5f9;">
+            <div class="container">
+                <h2 class="section-title">Selected Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>nectarchain Data Quality Monitoring</h3>
+                        <div class="project-tech">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Bokeh</span>
+                            <span class="skill-tag">ZODB</span>
+                        </div>
+                        <p>
+                            Critical monitoring tool for Cherenkov telescopes with real-time data quality 
+                            assessment. Features a web-based dashboard for visualizing calibration and observation data.
+                        </p>
+                    </div>
+                    <div class="project-card">
+                        <h3>physics.tools</h3>
+                        <div class="project-tech">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">ollama</span>
+                        </div>
+                        <p>
+                            AI-powered software search engine for the scientific community. Uses cosine similarity 
+                            and LLM re-ranking to provide accurate results from a comprehensive database of physics software.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://physics.tools" target="_blank">Visit Site</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>nectartron</h3>
+                        <div class="project-tech">
+                            <span class="skill-tag">unsloth</span>
+                            <span class="skill-tag">LoRA</span>
+                            <span class="skill-tag">LLM</span>
+                        </div>
+                        <p>
+                            Fine-tuned Large Language Model specifically for NectarCAM electronic logs (elogs). 
+                            Enables intelligent search and analysis of telescope operation records.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+            <div class="container">
+                <h2 class="section-title">Publications & Conferences</h2>
+                <div class="publications-grid">
+                    <div class="publication-item">
+                        <h4>📚 Book Author</h4>
+                        <p><strong>1 book</strong> published by Springer Nature on dark matter searches with Cherenkov telescopes.</p>
+                    </div>
+                    <div class="publication-item">
+                        <h4>📝 Corresponding Author</h4>
+                        <p><strong>2 H.E.S.S. Collaboration papers</strong> as corresponding author in top-tier journals:</p>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Physical Review Letters</li>
+                            <li>Astrophysical Journal</li>
+                        </ul>
+                    </div>
+                    <div class="publication-item">
+                        <h4>🎓 First Author</h4>
+                        <p><strong>2 first-author papers</strong> in top-tier physics and astronomy journals:</p>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Physical Review D</li>
+                            <li>Physical Review D</li>
+                        </ul>
+                    </div>
+                    <div class="publication-item">
+                        <h4>👥 Co-Author</h4>
+                        <p><strong>12+ H.E.S.S. Collaboration papers</strong> as author in:</p>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Physical Review Letters</li>
+                            <li>Astronomy & Astrophysics</li>
+                            <li>Journal of Cosmology and Astroparticle Physics</li>
+                            <li>Astrophysical Journal</li>
+                        </ul>
+                    </div>
+                    <div class="publication-item">
+                        <h4>🎤 Conference Presentations</h4>
+                        <p><strong>9 conference presentations</strong> including <strong>4 invited talks</strong> at:</p>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>ICRC (International Cosmic Ray Conference)</li>
+                            <li>TeVPA (TeV Particle Astrophysics)</li>
+                            <li>Moriond VHEPU</li>
+                        </ul>
+                    </div>
+                    <div class="publication-item">
+                        <h4>🏆 Honors & Awards</h4>
+                        <p><strong>H.E.S.S. prize (2023)</strong></p>
+                        <p>For outstanding service contributions to the experiment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section" style="background: #f1f5f9;">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-list">
+                    <div class="education-item">
+                        <div class="education-info">
+                            <h4>Ph.D. in Astrophysics and Cosmology</h4>
+                            <p>Irfu/DPhP, CEA, University Paris Saclay</p>
+                            <p style="font-size: 0.9rem; color: #64748b;">with jury's recommendations</p>
+                        </div>
+                        <div class="education-date">Oct. 2019 – Sept. 2022</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-info">
+                            <h4>M.Sc. in Astrophysics and Cosmology</h4>
+                            <p>University of Trieste</p>
+                            <p style="font-size: 0.9rem; color: #64748b;">110 cum laude/110</p>
+                        </div>
+                        <div class="education-date">Oct. 2017 – Sept. 2019</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-info">
+                            <h4>B.Sc. in Physics</h4>
+                            <p>University of Bologna, Alma Mater Studiorum</p>
+                        </div>
+                        <div class="education-date">Oct. 2014 – Sept. 2017</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p style="margin-bottom: 25px;">
+                            I'm always interested in discussing research collaborations, software development projects, 
+                            or opportunities in astrophysics and AI/ML.
+                        </p>
+                        <div class="contact-item">
+                            <span>✉️</span>
+                            <span>montanari@llr.in2p3.fr</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>💻</span>
+                            <span>github.com/alessandromontanari</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>🔗</span>
+                            <span>linkedin.com/in/alessandro-montanari</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>📍</span>
+                            <span>Palaiseau, France</span>
+                        </div>
+                        <div style="margin-top: 25px;">
+                            <a href="mailto:montanari@llr.in2p3.fr" class="btn">Send Email</a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        <form id="contactForm" onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Alessandro Montanari. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="https://github.com/alessandromontanari" target="_blank">GitHub</a>
+            </div>
+            <p style="font-size: 0.9rem; opacity: 0.7;">
+                Made with ❤️ for science and technology
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('theme-icon');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-icon').textContent = '☀️';
+            }
+
+            // Animate sections on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in-up');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form handler (client-side only for demo)
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+
+            // In a real implementation, you would send this to a backend
+            alert('Thank you for your message!\n\nNote: This is a demo form. In a real GitHub Pages site, you would need a form backend service.');
+            form.reset();
+        }
+    </script>
+</body>
+</html>

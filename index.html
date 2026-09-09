@@ -509,6 +509,27 @@
             font-size: 0.9rem;
         }
 
+        .content-link {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--primary);
+            transition: color 0.2s, border-bottom 0.2s;
+        }
+
+        .content-link:hover {
+            color: var(--primary-dark);
+            border-bottom: 1px solid var(--primary-dark);
+        }
+
+        .dark-mode .content-link {
+            color: var(--secondary);
+            border-bottom-color: var(--secondary);
+        }
+
+        .dark-mode .content-link:hover {
+            border-bottom-color: var(--secondary);
+        }
+
         /* Contact Section */
         .contact-info h3 {
             margin-bottom: 20px;
@@ -664,7 +685,7 @@
                 <div class="social-links animate-fade-in-up">
                     <a href="mailto:montanari@llr.in2p3.fr" title="Email">✉️</a>
                     <a href="https://github.com/alessandromontanari" title="GitHub">💻</a>
-                    <a href="https://linkedin.com/in/alessandro-montanari" title="LinkedIn">🔗</a>
+                    <a href="https://www.linkedin.com/in/alessandro-montanari-390829148/" title="LinkedIn">🔗</a>
                 </div>
                 <div style="margin-top: 30px;" class="animate-fade-in-up">
                     <a href="#contact" class="btn">Get in Touch</a>
@@ -794,14 +815,14 @@
                         <div class="experience-description">
                             <p><strong>Palaiseau, France</strong> (Advisor: Dr. Stephen Fegan)</p>
                             <ul>
-                                <li>Owned end-to-end development of the <strong>NectarCAM Data Quality Monitoring</strong>, a critical tool for Cherenkov telescopes</li>
+                                <li>Owned end-to-end development of the <a href="https://github.com/cta-observatory/nectarchain/tree/main/src/nectarchain/dqm" target="_blank" class="content-link"><strong>NectarCAM Data Quality Monitoring</strong></a>, a critical tool for Cherenkov telescopes</li>
                                 <li>Optimized execution time by <strong>3x</strong>, saving hundreds of kg of CO₂ per calibration cycle</li>
-                                <li>Contributed to the Bokeh-based web app for real-time monitoring, with Python backend and ZODB database</li>
+                                <li>Contributed to the <a href="https://lpnhe-cta2.in2p3.fr/nectarcam-dqm" target="_blank" class="content-link">Bokeh-based web app</a> for real-time monitoring, with Python backend and ZODB database</li>
                                 <li>Developed CI/CD pipelines for GitLab/GitHub and wrote extensive unit tests for every deployment</li>
-                                <li>Development for the nectarchain Test Readiness Review and Acceptance Verification for CTAO</li>
-                                <li>Built an OPC UA interface for server-client communication for NectarCAM calibration light sources</li>
-                                <li>Developed a fine-tuned LLM prototype on NectarCAM elogs, <strong>nectartron</strong>, with unsloth and ProgramAsWeights</li>
-                                <li>Member of the H.E.S.S. Executive Committee; supervised 2 Bachelor's projects</li>
+                                <li>Development for the nectarchain <a href="https://github.com/cta-observatory/nectarchain/tree/main/src/nectarchain/trr_test_suite" target="_blank" class="content-link">Test Readiness Review</a> and <a href="https://github.com/cta-observatory/nectarchain/tree/main/src/nectarchain/acceptance_verification_package" target="_blank" class="content-link">Acceptance Verification</a> for CTAO</li>
+                                <li>Built an <a href="https://gitlab.cta-observatory.org/cta-array-elements/mst/nectarcam/software/cal/calibration-box-mos" target="_blank" class="content-link">OPC UA interface</a> for server-client communication for NectarCAM calibration light sources</li>
+                                <li>Developed a fine-tuned LLM prototype on NectarCAM elogs, <a href="https://github.com/alessandromontanari/nectartron" target="_blank" class="content-link"><strong>nectartron</strong></a>, with unsloth and ProgramAsWeights</li>
+                                <li>Member of the <a href="https://hess-experiment.eu/h-e-s-s-organisation/" target="_blank" class="content-link">H.E.S.S. Executive Committee</a>; supervised 2 Bachelor's projects</li>
                             </ul>
                         </div>
                     </div>
@@ -817,13 +838,13 @@
                         <div class="experience-description">
                             <p><strong>Heidelberg, Germany</strong> (Advisor: Prof. Dr. Stefan Wagner)</p>
                             <ul>
-                                <li>Led full-stack development of <strong>physics.tools</strong>, a software search engine for the scientific community</li>
+                                <li>Led full-stack development of <a href="https://hess.lsw.uni-heidelberg.de/physics.tools/" target="_blank" class="content-link"><strong>physics.tools</strong></a>, a software search engine for the scientific community</li>
                                 <li>Built PostgreSQL database, Python backend API, and PHP frontend</li>
-                                <li>Developed AI-powered search (cosine similarity + LLM re-ranking via ollama, nomic-embed-text, gemma3)</li>
+                                <li>Developed AI-powered search (cosine similarity + LLM re-ranking via ollama, <a href="https://ollama.com/library/nomic-embed-text" target="_blank" class="content-link">nomic-embed-text</a>, <a href="https://www.ollama.com/library/gemma3" target="_blank" class="content-link">gemma3</a>)</li>
                                 <li>Designed a RAG application to improve search accuracy</li>
                                 <li><strong>Detected the Fermi Bubbles with H.E.S.S. at 8σ significance</strong> (research field standard: 5–6σ)</li>
                                 <li>Improved dark matter constraints by 4x (thermal models) and 2x (non-canonical models) via data analysis</li>
-                                <li>Co-lead of the H.E.S.S. Operations department: 20+ researchers across institutes</li>
+                                <li>Co-lead of the <a href="https://hess-experiment.eu/h-e-s-s-organisation/" target="_blank" class="content-link">H.E.S.S. Operations department</a>: 20+ researchers across institutes</li>
                                 <li>Mentored 1 Master's student and close collaboration with a Ph.D. project</li>
                             </ul>
                         </div>
@@ -855,19 +876,23 @@
                 <h2 class="section-title">Selected Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3>nectarchain Data Quality Monitoring</h3>
+                        <h3><a href="https://github.com/cta-observatory/nectarchain/tree/main/src/nectarchain/dqm" target="_blank" class="content-link">nectarchain Data Quality Monitoring</a></h3>
                         <div class="project-tech">
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">Bokeh</span>
                             <span class="skill-tag">ZODB</span>
                         </div>
                         <p>
-                            Critical monitoring tool for Cherenkov telescopes with real-time data quality 
-                            assessment. Features a web-based dashboard for visualizing calibration and observation data.
+                            Critical monitoring tool for Cherenkov telescopes with real-time data quality
+                            assessment. Features a <a href="https://lpnhe-cta2.in2p3.fr/nectarcam-dqm" target="_blank" class="content-link">web-based dashboard</a> for visualizing calibration and observation data.
                         </p>
+                        <div class="project-links">
+                            <a href="https://github.com/cta-observatory/nectarchain/tree/main/src/nectarchain/dqm" target="_blank">GitHub</a>
+                            <a href="https://lpnhe-cta2.in2p3.fr/nectarcam-dqm" target="_blank">Web App</a>
+                        </div>
                     </div>
                     <div class="project-card">
-                        <h3>physics.tools</h3>
+                        <h3><a href="https://hess.lsw.uni-heidelberg.de/physics.tools/" target="_blank" class="content-link">physics.tools</a></h3>
                         <div class="project-tech">
                             <span class="skill-tag">PostgreSQL</span>
                             <span class="skill-tag">Python</span>
@@ -875,24 +900,28 @@
                             <span class="skill-tag">ollama</span>
                         </div>
                         <p>
-                            AI-powered software search engine for the scientific community. Uses cosine similarity 
+                            AI-powered software search engine for the scientific community. Uses cosine similarity
                             and LLM re-ranking to provide accurate results from a comprehensive database of physics software.
                         </p>
                         <div class="project-links">
-                            <a href="https://physics.tools" target="_blank">Visit Site</a>
+                            <a href="https://hess.lsw.uni-heidelberg.de/physics.tools/" target="_blank">Visit Site</a>
                         </div>
                     </div>
                     <div class="project-card">
-                        <h3>nectartron</h3>
+                        <h3><a href="https://github.com/alessandromontanari/nectartron" target="_blank" class="content-link">nectartron</a></h3>
                         <div class="project-tech">
                             <span class="skill-tag">unsloth</span>
                             <span class="skill-tag">LoRA</span>
+                            <span class="skill-tag">ProgramAsWeights</span>
                             <span class="skill-tag">LLM</span>
                         </div>
                         <p>
-                            Fine-tuned Large Language Model specifically for NectarCAM electronic logs (elogs). 
+                            Fine-tuned Large Language Model specifically for NectarCAM electronic logs (elogs).
                             Enables intelligent search and analysis of telescope operation records.
                         </p>
+                        <div class="project-links">
+                            <a href="https://github.com/alessandromontanari/nectartron" target="_blank">GitHub</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -905,23 +934,23 @@
                 <div class="publications-grid">
                     <div class="publication-item">
                         <h4>📚 Book Author</h4>
-                        <p><strong>1 book</strong> published by Springer Nature on dark matter searches with Cherenkov telescopes.</p>
+                        <p><a href="https://link.springer.com/book/10.1007/978-3-031-66470-0" target="_blank" class="content-link"><strong>1 book</strong></a> published by Springer Nature on dark matter searches with Cherenkov telescopes.</p>
                     </div>
                     <div class="publication-item">
                         <h4>📝 Corresponding Author</h4>
                         <p><strong>3 H.E.S.S. Collaboration papers</strong> as corresponding author in top-tier journals:</p>
                         <ul style="margin-top: 10px; padding-left: 20px;">
-                            <li>Physical Review Letters</li>
-                            <li>Physical Review Letters</li>
-                            <li>Astrophysical Journal</li>
+                            <li><a href="https://journals.aps.org/prl/abstract/10.1103/d8tj-55kc" target="_blank" class="content-link">Physical Review Letters</a></li>
+                            <li><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.111101" target="_blank" class="content-link">Physical Review Letters</a></li>
+                            <li><a href="https://iopscience.iop.org/article/10.3847/1538-4357/abff59" target="_blank" class="content-link">Astrophysical Journal</a></li>
                         </ul>
                     </div>
                     <div class="publication-item">
                         <h4>🎓 First Author</h4>
                         <p><strong>2 first-author papers</strong> in top-tier physics and astronomy journals:</p>
                         <ul style="margin-top: 10px; padding-left: 20px;">
-                            <li>Physical Review D</li>
-                            <li>Physical Review D</li>
+                            <li><a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.043028" target="_blank" class="content-link">Physical Review D</a></li>
+                            <li><a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.083027" target="_blank" class="content-link">Physical Review D</a></li>
                         </ul>
                     </div>
                     <div class="publication-item">
@@ -946,7 +975,7 @@
                     </div>
                     <div class="publication-item">
                         <h4>🏆 Honors & Awards</h4>
-                        <p><strong>H.E.S.S. prize (2023)</strong></p>
+                        <p><a href="https://hess-experiment.eu/prizes/" target="_blank" class="content-link"><strong>H.E.S.S. prize (2023)</strong></a></p>
                         <p>For outstanding service contributions to the experiment.</p>
                     </div>
                 </div>
@@ -1005,7 +1034,7 @@
                     </div>
                     <div class="contact-item">
                         <span>🔗</span>
-                        <span>linkedin.com/in/alessandro-montanari</span>
+                        <span>linkedin.com/in/alessandro-montanari-390829148</span>
                     </div>
                     <div class="contact-item">
                         <span>📍</span>
